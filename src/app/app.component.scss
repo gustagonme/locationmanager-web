@@ -1,0 +1,40 @@
+.header{
+    overflow: auto;
+    background-color: #108851;
+    padding: 20px;
+    width: 100%;
+}
+
+.title{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 5%;
+}
+.btn-carrito{
+    color:white;
+    text-align: right;
+}
+
+
+element.style {
+    position: relative !important;
+    top: 0px;
+    left: 0px;
+    will-change: transform;
+    transform: translate(0px, 38px);
+}
+
+
+.fa {
+    font: normal normal normal 30px/0 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
