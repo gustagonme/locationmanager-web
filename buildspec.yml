@@ -1,0 +1,27 @@
+# Do not change version. This is the version of aws buildspec, not the version of your buldspec file.
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10  
+    commands:
+      - echo No changes for pre build.
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install -g @angular/cli
+      - npm install    
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Node.js code
+      - ng build --prod
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: ./dist/locationmanager-web/
