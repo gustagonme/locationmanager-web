@@ -1,27 +1,21 @@
-# LocationmanagerWeb
+# Locationmanager Web Angular Front end
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
+Este repositorio está destinado para el Front-end de la solución Location manager.
 
-## Development server
+## Instalación en ambiente local
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Prerrequisitos:
 
-## Code scaffolding
+- Nodejs versión 10 o superior.
+- IDE para el manejo de código Typescript, preferiblemente VisualStudio code.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Posterior a la instalación de Nodejs, es necesario instalar el CLI de angular para correr nuestro proyecto.
+Este se instala de manera global con el siguiente comando: npm install -g @angular/cli.
 
-## Build
+2. Una vez instalado, abrimos nuestro proyecto con el editor de preferencia y modificamos el archivo endpoint.ts, ubicado en src/_utils. 
+Este contiene la url de los servicios Rest que consume el proyecto, para fines practicos debe proporcionar la URL local que tenga el proyecto 
+Backend.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+3. Realizados estos cambios, ejecutar el comando npm install.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. Finalizado este procesos, procedemos a ejecutar el comando ng serve --open para que el proyecto se despliegue de manera local en su navegador. 
