@@ -1,0 +1,54 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <button type="button" class="btn btn-success" (click)="openCreate()">Crear una locación</button>
+
+    <table class="table table-striped grid tableLocation" >
+    <thead>
+    <tr>
+        <th scope="col">Id Locación</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Id locación principal</th>
+        <th scope="col">Área en mts cuadrados</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let locat of locations ">
+        <td>{{locat.uuid}}</td>
+        <td>{{locat.name}}</td>
+        <td>{{locat.address }}</td>
+        <td>{{locat.parent_location_id}}</td>
+        <td>{{locat.area_m2 }}</td>
+        <td><button type="button" class="btn btn-success" (click)="openDetails(content,locat)">Ver mas...</button></td>
+    </tr>
+    </tbody>
+    </table>
+
+    </div>
+    <ng-template #content let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">Detalle de la locación</h4>
+              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body grid modalDetails">
+              <div class="row">
+                    <div  *ngFor="let details of detailLocation; let productoSeleccionado = index">
+                                   
+                            <div class="col-12">
+                              <label class="card-text">Id Locación: {{details.uuid}}</label><br>
+                              <label class="card-text">Nombre: {{details.name}}</label><br>
+                              <label class="card-text">Dirección: {{details.address}}</label><br>
+                              <label class="card-text">Id de locación principal: {{details.parent_location_id}}</label><br>
+                              <label class="card-text">Àrea en metros cuadrados: {{details.area_m2}}</label>
+                            </div>
+                           </div>
+      
+              </div>  
+            </div>
+
+          </ng-template>
+
+</div>
+
